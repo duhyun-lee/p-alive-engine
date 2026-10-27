@@ -68,21 +68,23 @@ Every survivor is born with a grade. Higher grades are rarer, tougher, hit harde
 
 ## Optional: Codex add-on / 선택: 코덱스 애드온
 
-`P-Alive-codex-<version>.zip` lets **one survivor of your choice** be run by Codex (OpenAI's coding AI, through the
-Codex CLI on your PC) instead of the local AI: richer talk and decisions, and game actions you ask for in the chat.
-`P-Alive-codex-<버전>.zip`을 설치하면 **고른 생존자 한 명**을 로컬 AI 대신 Codex(이 PC의 Codex CLI)가 맡습니다.
+`P-Alive-codex-<version>.zip` lets **one survivor of your choice** be run by Codex (OpenAI's coding AI, through
+Codex on your PC) instead of the local AI: richer talk and decisions, and game actions you ask for in the chat.
+`P-Alive-codex-<버전>.zip`을 설치하면 **고른 생존자 한 명**을 로컬 AI 대신 Codex(이 PC의 Codex)가 맡습니다.
 대화와 판단이 더 풍부해지고, 채팅으로 부탁한 게임 행동을 직접 해 줍니다.
 
-- Needs Windows and the Codex CLI installed and signed in; use counts against your own OpenAI / ChatGPT plan.
+- Needs Windows and **Codex signed in**: the Codex app for Windows is enough (the bridge finds its `codex.exe` by
+  itself), or the Codex CLI. Use counts against your own OpenAI / ChatGPT plan.
   GitHub Copilot CLI, if you have it, takes over when Codex hits its limit.
-  Windows와 Codex CLI 설치·로그인이 필요하고, 사용량은 본인 요금제에서 차감됩니다. GitHub Copilot CLI가 있으면 한도 초과 시 대신 씁니다.
+  Windows와 **로그인된 Codex**가 필요합니다. 윈도우용 Codex 앱만 있어도 되고(브리지가 앱의 `codex.exe`를 알아서 찾습니다),
+  Codex CLI도 됩니다. 사용량은 본인 요금제에서 차감됩니다. GitHub Copilot CLI가 있으면 한도 초과 시 대신 씁니다.
 - Install: extract the zip into your Zomboid user folder (`C:\Users\<you>\Zomboid\PRBrain\...`). The engine starts it by itself.
   설치: zip을 Zomboid 사용자 폴더에 풉니다(`C:\Users\<사용자>\Zomboid\PRBrain\...`). 엔진이 알아서 켭니다.
 - In game: right-click a survivor, **Set as Codex**. **Only one survivor at a time**; designating another replaces the first.
   게임에서 생존자를 오른쪽 클릭해 **코덱스로 지정**. **한 번에 한 명만** 지정되고, 다른 사람을 지정하면 앞사람은 해제됩니다.
-- A survivor can be set as Codex even without the add-on, but the Codex features only work while Codex (the add-on and a signed-in Codex CLI) is running.
-  애드온이 없어도 코덱스 지정은 되지만, 코덱스 기능은 Codex(애드온과 로그인된 Codex CLI)가 켜져 있을 때만 동작합니다.
-- What the Codex survivor sees is sent to OpenAI through your Codex CLI. / 코덱스 생존자가 보는 내용은 본인의 Codex CLI를 통해 OpenAI로 전송됩니다.
+- A survivor can be set as Codex even without the add-on, but the Codex features only work while Codex (the add-on and a signed-in Codex) is running.
+  애드온이 없어도 코덱스 지정은 되지만, 코덱스 기능은 Codex(애드온과 로그인된 Codex)가 켜져 있을 때만 동작합니다.
+- What the Codex survivor sees is sent to OpenAI through your Codex. / 코덱스 생존자가 보는 내용은 본인의 Codex를 통해 OpenAI로 전송됩니다.
 
 ## Notes / 참고
 
