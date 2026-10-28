@@ -8,19 +8,24 @@ P -Alive 모드(프로젝트 좀보이드 Build 42.21 이상, 싱글플레이)�
 
 ## Install / 설치
 
-1. Download `P-Alive-engine-<version>.zip` from the latest release and extract it.
+1. Subscribe to **P -Alive** on the Steam Workshop. The engine comes inside the mod.
+   창작마당에서 **P -Alive**를 먼저 구독합니다. 엔진은 모드 안에 같이 들어 있습니다.
+2. Download `P-Alive-engine-<version>.zip` from the latest release and extract it.
    최신 릴리스에서 `P-Alive-engine-<버전>.zip`을 내려받아 압축을 풉니다.
-2. Close the game and double-click **`Install P-Alive.bat`**.
-   It copies `P-Alive.jar` into the game folder and adds `-javaagent:P-Alive.jar` to `ProjectZomboid64.json`
-   and the launch .bat files. Changed files are backed up once.
-   게임을 끈 상태에서 **`Install P-Alive.bat`**을 더블클릭합니다. 게임 폴더에 엔진을 넣고 실행 설정에 한 줄을 추가하며,
-   바꾸는 파일은 처음 한 번 백업됩니다.
-3. Subscribe to **P -Alive** on the Steam Workshop and enable it.
-   창작마당에서 **P -Alive**를 구독하고 켭니다.
-4. Optional: **`Install AI chat (optional).bat`** sets up a local AI (Ollama) for free-form chat.
+3. Close the game and double-click **`Install P-Alive.bat`**. It adds the engine line to the game's launch settings
+   (`ProjectZomboid64.json` and the launch .bat files), pointing at the engine inside the subscribed mod: from then on
+   **the engine updates together with the mod**. Not subscribed yet: it copies the engine of the zip into the game
+   folder (run it once more after subscribing). Changed files are backed up once.
+   게임을 끈 상태에서 **`Install P-Alive.bat`**을 더블클릭합니다. 실행 설정에 엔진 한 줄을 추가하는데, 구독한 모드 안의
+   엔진을 쓰도록 연결하므로 앞으로는 **모드가 업데이트될 때 엔진도 같이 업데이트**됩니다. 구독 전이면 zip의 엔진을 게임
+   폴더에 넣습니다(구독한 뒤 한 번 더 실행하세요). 바꾸는 파일은 처음 한 번 백업됩니다.
+4. Enable **P -Alive** in the game's mod list. / 게임의 모드 목록에서 **P -Alive**를 켭니다.
+5. Optional: **`Install AI chat (optional).bat`** sets up a local AI (Ollama) for free-form chat.
    선택: 자유 대화용 로컬 AI(Ollama)를 설치합니다.
 
+Installed an older version? Run `Install P-Alive.bat` once more; after that the engine updates by itself.
 After a game update or a file integrity check, run the installer again. **`Uninstall P-Alive.bat`** removes it.
+예전에 설치했다면 `Install P-Alive.bat`을 한 번만 다시 실행하세요. 그 뒤로는 엔진도 자동으로 업데이트됩니다.
 게임 업데이트나 무결성 검사 뒤에는 설치 파일을 다시 실행하세요. 제거는 **`Uninstall P-Alive.bat`**입니다.
 
 ## Survivor grades / 생존자 등급
