@@ -3,16 +3,22 @@
 Survivor engine for the **P -Alive** mod (Project Zomboid Build 42.21+, single player).
 P -Alive 모드의 생존자 엔진입니다 (Project Zomboid Build 42.21 이상, 싱글플레이).
 
-> **Updated 10-30: the game did not start after installing? Download the installer again and run it once.**
-> The first 0.3.2 installer wrote the starter as a relative path (`-javaagent:P-Alive-starter.jar`). When Steam starts the
-> game outside its folder, Java cannot find that file and the game closes at once (the `.bat` launch still worked).
-> The new `P-Alive-Setup.exe` and `install.ps1` write the full path, like other Java mods do, and replace the old line.
-> The engine itself is unchanged.
+> **Updated 10-30: the game closed right after pressing Play? Download the installer again and run it once.**
+> Steam's Play button starts the game through `ProjectZomboid64.exe`, which runs Java inside its own process. To load
+> the engine, Java needs two of its own files (`java.dll`, `jli.dll`) next to that exe, and a stock game folder has
+> them only in `jre64\bin`. Java then stopped with "Could not find agent library instrument" and the game closed at
+> once; the `.bat` launch worked because it starts Java from `jre64\bin`. The new `P-Alive-Setup.exe` and
+> `install.ps1` copy these two files from the game's own Java next to the exe (and remove them again on uninstall).
+> Players with Project Remnants installed had them already, which is why it did not show for everyone.
+> Run the installer again after a game update. The engine itself is unchanged.
 >
-> **10-30 업데이트: 설치 후 게임이 안 켜졌다면 설치 파일을 다시 받아 한 번 실행하세요.**
-> 처음 올린 0.3.2 설치 파일은 시작 파일을 상대 경로(`-javaagent:P-Alive-starter.jar`)로 적었습니다. 스팀이 게임 폴더
-> 밖에서 게임을 켜면 자바가 그 파일을 못 찾아서 게임이 바로 꺼집니다(`.bat`로 켜면 됐던 이유입니다). 새
-> `P-Alive-Setup.exe`와 `install.ps1`은 다른 자바 모드처럼 전체 경로를 적고, 예전 줄을 바꿔 줍니다. 엔진은 그대로입니다.
+> **10-30 업데이트: 플레이를 누르자마자 게임이 꺼졌다면 설치 파일을 다시 받아 한 번 실행하세요.**
+> 스팀 플레이 버튼은 `ProjectZomboid64.exe`로 게임을 켜고, 이 실행기는 자바를 자기 안에서 돌립니다. 엔진을 불러오려면
+> 자바 자신의 파일 두 개(`java.dll`, `jli.dll`)가 그 실행 파일 옆에 있어야 하는데, 원래 게임 폴더에는 `jre64\bin`에만
+> 있습니다. 그래서 자바가 "Could not find agent library instrument"로 멈추고 게임이 바로 꺼졌습니다(`.bat`은 `jre64\bin`의
+> 자바로 켜서 됐습니다). 새 `P-Alive-Setup.exe`와 `install.ps1`은 이 두 파일을 게임 자체 자바에서 실행 파일 옆으로
+> 복사합니다(제거할 때 다시 지웁니다). Project Remnants를 설치한 분은 이미 그 파일이 있어서 문제가 없었습니다.
+> 게임 업데이트 뒤에는 설치 파일을 다시 실행하세요. 엔진은 그대로입니다.
 
 ## Install / 설치
 
@@ -142,6 +148,6 @@ Codex on your PC) instead of the local AI: richer talk and decisions, and game a
 
 ## SHA-256
 
-- `P-Alive-engine-0.3.2.zip`: `00848e9cf8452936847c3ea4baea213274d6fbf4b757b61f136c42793d54d7ef`
+- `P-Alive-engine-0.3.2.zip`: `e22f0cde35deebf12443fe6b9da1387032f0bce2b6363d1c91ddb8b4240df428`
 - `P-Alive-codex-0.3.2.zip`: `b0f69fd689f65a69dc43a66e6bb34a87277fd823833d25aa60fdd6eaf77ae7ee`
-- `P-Alive-Setup.exe`: `583fa6a4e67f3a93698aa9f31dedfe6f6dfafbb3e8186cd22b91bdae4f87894b`
+- `P-Alive-Setup.exe`: `9c8cdf18822e445a73d04a14bf597da54cf8d5baede8eedb33bb0f0153e8dc23`
