@@ -8,7 +8,8 @@ P -Alive 모드의 생존자 엔진입니다 (Project Zomboid Build 42.21 이상
 > the engine, Java needs two of its own files (`java.dll`, `jli.dll`) next to that exe, and a stock game folder has
 > them only in `jre64\bin`. Java then stopped with "Could not find agent library instrument" and the game closed at
 > once; the `.bat` launch worked because it starts Java from `jre64\bin`. The new `P-Alive-Setup.exe` and
-> `install.ps1` copy these two files from the game's own Java next to the exe (and remove them again on uninstall).
+> `install.ps1` copy Java's runtime files (those two plus the VC runtime and the rest Java needs, 23 files) from the
+> game's own Java next to the exe, and remove the ones they put there on uninstall.
 > Players with Project Remnants installed had them already, which is why it did not show for everyone.
 > Run the installer again after a game update. The engine itself is unchanged.
 >
@@ -16,8 +17,9 @@ P -Alive 모드의 생존자 엔진입니다 (Project Zomboid Build 42.21 이상
 > 스팀 플레이 버튼은 `ProjectZomboid64.exe`로 게임을 켜고, 이 실행기는 자바를 자기 안에서 돌립니다. 엔진을 불러오려면
 > 자바 자신의 파일 두 개(`java.dll`, `jli.dll`)가 그 실행 파일 옆에 있어야 하는데, 원래 게임 폴더에는 `jre64\bin`에만
 > 있습니다. 그래서 자바가 "Could not find agent library instrument"로 멈추고 게임이 바로 꺼졌습니다(`.bat`은 `jre64\bin`의
-> 자바로 켜서 됐습니다). 새 `P-Alive-Setup.exe`와 `install.ps1`은 이 두 파일을 게임 자체 자바에서 실행 파일 옆으로
-> 복사합니다(제거할 때 다시 지웁니다). Project Remnants를 설치한 분은 이미 그 파일이 있어서 문제가 없었습니다.
+> 자바로 켜서 됐습니다). 새 `P-Alive-Setup.exe`와 `install.ps1`은 이 두 파일과 VC 런타임 등 자바에 필요한 런타임 파일
+> 23개를 게임 자체 자바에서 실행 파일 옆으로 복사합니다(제거할 때 넣은 것만 다시 지웁니다). Project Remnants를 설치한
+> 분은 이미 그 파일이 있어서 문제가 없었습니다.
 > 게임 업데이트 뒤에는 설치 파일을 다시 실행하세요. 엔진은 그대로입니다.
 
 ## Install / 설치
@@ -148,6 +150,6 @@ Codex on your PC) instead of the local AI: richer talk and decisions, and game a
 
 ## SHA-256
 
-- `P-Alive-engine-0.3.2.zip`: `e22f0cde35deebf12443fe6b9da1387032f0bce2b6363d1c91ddb8b4240df428`
+- `P-Alive-engine-0.3.2.zip`: `b1a000996596269d2f74ea9647adff21919082c28e86ecdc50893dc104f979b2`
 - `P-Alive-codex-0.3.2.zip`: `b0f69fd689f65a69dc43a66e6bb34a87277fd823833d25aa60fdd6eaf77ae7ee`
-- `P-Alive-Setup.exe`: `9c8cdf18822e445a73d04a14bf597da54cf8d5baede8eedb33bb0f0153e8dc23`
+- `P-Alive-Setup.exe`: `5b86e4fb25e530e7b31ff28ae47493502d703093d75a93efdfe37f5fa086fa9a`
